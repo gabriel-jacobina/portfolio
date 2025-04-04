@@ -1,0 +1,132 @@
+#projects {
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+#projects_list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Define duas colunas com larguras iguais */
+    gap: 20px; /* Define o espaçamento entre as colunas */
+    justify-content: center; /* Centraliza os projetos na grade */
+}
+
+.project {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align: justify;
+    padding: 24px;
+    margin:24px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    max-width:400px;
+    border-radius:8px;
+}
+
+.project h4 {
+    font-family: 'Poppins';
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.project p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+}
+.project img {
+    width: 100%;
+    max-width:380px;
+    height: auto;
+    border: 1px;
+    border: 1px solid #000000; /* 1px solid black border */
+    border-radius: 12px;
+}
+
+.repo_button {
+  align-items: center;
+  background-color: #000000;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font-family: 'Inter';
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+    font-weight: bold;
+}
+
+.repo_button:after {
+  background-color: #333232;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.repo_button:hover:after {
+  transform: translate(0, 0);
+}
+
+.repo_button:active {
+  background-color: #fff;
+    color: #000000;
+  outline: 0;
+}
+
+.repo_button:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+    .repo_button {
+    padding: 0 40px;
+    }
+
+
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+        #projects_list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+@media (max-width: 768px) {
+    #projects_list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .project {
+        max-width: 300px;
+    }
+    .project img {
+        max-width:280px;
+    }
+
+}

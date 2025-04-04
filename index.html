@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gabriel Jacobina</title>
+    <link rel="icon" href="./api/static/assets/logo.png" type="image/x-icon">
+    <!-- <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon"> -->
+
+    <link rel="stylesheet" href="./api/static/css/home/main.css">
+    <link rel="stylesheet" href="./api/static/css/home/about_me.css">
+    <link rel="stylesheet" href="./api/static/css/home/skills.css">
+    <link rel="stylesheet" href="./api/static/css/home/projects.css">
+    <!-- <link rel="stylesheet" href="./api/static/css/home/posts.css"> -->
+    <link rel="stylesheet" href="./api/static/css/home/footer.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class='nav_container'>
+        <div></div>
+        <nav>
+            <a class='nav_button' href="#top_of_page">About Me</a>
+            <a class='nav_button' href="#skills">Skills</a>
+            <a class='nav_button' href="#projects">Projects</a>
+        </nav>
+        <div class='nav_social'>
+            <a href="https://github.com/gabriel-jacobina/" target="_blank">
+                <img class='social_image' src="./api/static/assets/social/github.svg" alt="Github">
+            </a>
+            <a href="https://www.linkedin.com/in/gabriel-jacobina/" target="_blank">
+                <img class='social_image' src="./api/static/assets/social/linkedin.svg" alt="Linkedin">
+            </a>
+        </div>
+    </div>
+
+
+    <header id='top_of_page'>
+
+        <section id='about_me'>
+
+            <div class='head_right'>
+                <h1>Hello. <br>
+                    I'm <span class="color_name"> Gabriel </span></h1>
+                <h2>Data Analyst and asping data engineer.</h2>
+
+
+                <p>
+                    <strong> Mainly focused </strong> in creating etl's and dashboards for<br>
+                    the Growth (MKT) team for lead atribuition an retention. <br>
+                    Always looking for new callenges where I can <strong>power up </strong><br>
+                    companie's bussines decisions! 🚀
+                </p>
+                <div>
+                    <a href="./api/static/assets/CV - Gabriel Jacobina.pdf" download style="text-decoration:none">
+                        <button role="button" class="download_button"> Download CV</button>
+                    </a>
+                </div>
+            </div>
+            <div class='head_left'>
+                <img src="./api/static/assets/dashboard_placeholder.png">
+
+            </div>
+        </section>
+
+
+    </header>
+    <a href="#" id="voltar-ao-topo">↑</a>
+
+    <script>
+        var voltarAoTopoButton = document.getElementById("voltar-ao-topo");
+
+        window.addEventListener("scroll", function () {
+            if (window.pageYOffset > 100) {
+                voltarAoTopoButton.style.display = "block";
+            } else {
+                voltarAoTopoButton.style.display = "none";
+            }
+        });
+
+        voltarAoTopoButton.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
+
+    <div id="skills">
+        <h2 class="titulo">Skills</h2>
+        <div id="skills_list">
+            <div class="skill">
+                <img src="./api/static/assets/skills/etl.svg">
+                <h3>ETL</h3>
+                <p>Using Python scripts for extraction, processing, and loading into a database</p>
+            </div>
+            <div class="skill">
+                <img src="./api/static/assets/skills/data_analysis.svg">
+                <h3>Data Analysis</h3>
+                <p>Using Python and SQL for data analysis, including data cleaning, transformation, and visualization</p>
+                </p>
+            </div>
+            <div class="skill">
+                <img src="./api/static/assets/skills/ciencia.svg">
+                <h3>Data Science</h3>
+                <p>Building predictive and descriptive models to bring intelligence to decision-making</p>
+            </div>
+        </div>
+        <hr>
+        <h2 class="technologies">Technologies</h2>
+        <p id="tech_desc">Main technologies that i work with:</p>
+        <div id = "tech_list">
+            <div class="image-container">
+                <img src="./api/static/assets/tech/python.svg" alt="">
+                <div class="overlay-text">
+                    <b>Python</b> is a high-level, interpreted, general-purpose programming language, known for its
+                    simple
+                    syntax and readability.
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="./api/static/assets/tech/power_bi.svg" alt="">
+                <div class="overlay-text">
+                    <b>Power BI</b> is a business analytics tool by Microsoft that provides interactive visualizations
+                    and bi capabilities.
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="./api/static/assets/tech/metabase.svg" alt="">
+                <div class="overlay-text">
+                    <b>Metabase</b> is an open-source business intelligence tool that allows users to create and share
+                    dashboards
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="./api/static/assets/tech/hubspot.svg" alt="">
+                <div class="overlay-text">
+                    <b>Hubspot</b> is a leading CRM platform that provides tools for marketing, sales, and customer
+                    service.
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="./api/static/assets/tech/git.svg" alt="">
+                <div class="overlay-text">
+                    <b>Git</b> is a widely used version control system for tracking changes in source code during
+                    development.
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="./api/static/assets/tech/aws.svg" alt="">
+                <div class="overlay-text">
+                    <b>AWS</b> is a cloud computing platform offered by Amazon.
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="projects">
+        <h2 class="titulo">My Projects</h2>
+        <div id="projects_list">
+            <div class="project">
+                <img src="./api/static/assets/project_1.png">
+                <h4>This website!!</h4>
+                <p> 
+                    This website was built using Flask and HTML/CSS, and is hosted on Varcell. <br>
+                    It serves as a portfolio to showcase my projects and skills.
+                </p>
+                <div class="proj_buttons">
+                    <!-- <a href="https://github.com/gabriel-jacobina/placeholder" target=”_blank”
+                        style="text-decoration:none">
+                        <button class="repo_button">Repo</button>
+                    </a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <p>&copy; 2024. All Rights Reserved</p>
+        <div id="footer_social">
+            <a href="https://www.linkedin.com/in/gabriel-jacobina/" target=”_blank”>
+                <img src="./api/static/assets/social/linkedin.svg" alt="Linkedin">
+            </a>
+            <a href="https://github.com/gabriel-jacobina" target=”_blank”>
+                <img src="./api/static/assets/social/github.svg" alt="Github">
+            </a>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+#skills {
+    background-color:black;
+    color:white;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+#skills h2{
+    color: #FFFFFF;
+}
+
+#skills_list {
+    display: flex;
+    flex-direction:row;
+}
+#skills_list img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 35px;
+    object-fit: contain;
+    
+}
+
+.skill {
+    padding: 16px;
+}
+
+.skill h3 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.skill p {
+    width: 221px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #FFFFFF;
+}
+
+hr {
+    width: 206px;
+    height: 0px;
+    border: 1px solid #FFFFFF;
+}
+
+#technologies {
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+}
+
+.technologies{
+    margin-bottom:0;
+}
+
+#tech_desc {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #fff;
+}
+
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    padding: 43px;
+}
+
+.image-container img{
+    max-width: 100%;
+    max-height: 100%;
+    width: 35px;
+    object-fit: contain;
+}
+
+.overlay-text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #000000;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    width: 10em;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.image-container:hover .overlay-text {
+    opacity: 1;
+}
+
+.overlay-text b{
+    padding: 30px 0 8px;
+    position: relative;
+    font-weight: 600;
+    font-style:normal;
+}
+
+.overlay-text b::before {
+    content: "";
+    position: absolute;
+    opacity: 75%;
+    height: 14px;
+    width:100%;
+    background: #FCCC1C;
+    z-index: -1;
+}
+
+
+
+@media (max-width: 768px) {
+    #technologies {
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #skills_list {
+        flex-direction:column;
+    }
+
+}

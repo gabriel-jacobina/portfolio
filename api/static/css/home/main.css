@@ -1,0 +1,179 @@
+:root {
+  --midnight-blue: #160042;
+  --bg: #f2f7fc;
+  --medium-slate-blue: #956bff;
+  --slate-blue: #5c47ff;
+  --royal-blue: #006aff;
+  --deep-sky-blue: #42ccff;
+  --boring-gray: #384d55;
+}
+
+body {
+    background: var(--bg);
+    font-family: "Arial", Times, serif;
+    padding: 0;
+    margin: 0;
+}
+
+/* navigator */
+.nav_container {
+    position: fixed;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    /* justify-content: center; */
+    /* align-items: center; */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 8%;
+    background-color: var(--bg);
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    z-index: 100;
+    padding: 0;
+}
+
+.nav_button {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 50px; /* Match container height */
+    color: #000000;
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.4s ease;
+    text-align: center;
+    
+}
+
+.nav_button:hover {
+    color: var(--medium-slate-blue);
+}
+
+.nav_social {
+    display:flex;
+    flex-direction: row-reverse;
+    align-items:center;
+}
+
+.nav_social img {
+    width: 45px;
+    margin-right: 10px;
+}
+
+
+/* headers */
+header {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg);
+}
+
+
+
+/*
+.header_title{
+    padding-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    grid-template-areas: 'lh img rh';
+    column-gap: 15px;
+}
+
+.left_header {
+    grid-area: lh;
+    justify-self: end;
+}
+
+header img {
+    width: 70px;
+    height: 70px;
+    grid-area: img;
+}
+
+.right_header {
+    grid-area: rh;
+    justify-self: start;
+}
+
+header p {
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 54px;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+.overlay-text {
+    cursor: default
+}
+
+
+.social .social_image {
+    width: 60px;
+    outline: none;
+}
+ */
+
+  
+
+#voltar-ao-topo {
+    text-decoration: none;
+    font-size: 24px;
+    z-index: 999;
+    display: none;
+    /* Esconde o botão por padrão */
+    position: fixed;
+    /* Define a posição fixa */
+    bottom: 100px;
+    /* Define a distância da parte inferior da tela */
+    right: 20px;
+    /* Define a distância da borda direita da tela */
+    padding: 10px 20px;
+    /* Adiciona espaçamento interno */
+    background-color: #ffd84b;
+    /* Cor de fundo do botão */
+    color: #000000;
+    /* Cor do texto */
+    border: none;
+    /* Remove a borda */
+    border-radius: 50%;
+    /* Adiciona borda arredondada */
+    cursor: pointer;
+    /* Altera o cursor ao passar o mouse sobre o botão */
+}
+
+#voltar-ao-topo:hover {
+    background-color: #000000;
+    color: #ffd84b;
+}
+
+
+@media (max-width: 480px) {
+    nav a {
+        padding: 16px;
+    }
+}
