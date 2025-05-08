@@ -5,35 +5,85 @@ const skillCategories = [
   {
     title: 'Data Analysis & Visualization',
     skills: [
-      { name: 'Metabase', proficiency: 'Expert' },
-      { name: 'Power BI', proficiency: 'Advanced' },
-      { name: 'Superset', proficiency: 'Intermediate' },
-      { name: 'Looker', proficiency: 'Beginner' }
+      {
+        name: 'Metabase',
+        proficiency: 'Expert',
+        logo: "../public/assets/metabase-icon.svg"
+      },
+      {
+        name: 'Power BI',
+        proficiency: 'Advanced',
+        logo: '../public/assets/power-bi-icon.svg'
+      },
+      {
+        name: 'Superset',
+        proficiency: 'Intermediate',
+        logo: '../public/assets/apache-superset-icon.svg'
+      },
+      {
+        name: 'Looker',
+        proficiency: 'Beginner',
+        logo: '../public/assets/looker-icon.svg'
+      }
     ]
   },
   {
     title: 'Programming & Databases',
     skills: [
-      { name: 'SQL', proficiency: 'Expert' },
-      { name: 'Python', proficiency: 'Advanced' },
-      { name: 'MongoDB', proficiency: 'Intermediate' },
-      { name: 'Spark', proficiency: 'Beginner' }
+      {
+        name: 'SQL',
+        proficiency: 'Expert',
+        logo: '../public/assets/sql-database-generic.svg'
+      },
+      {
+        name: 'Python',
+        proficiency: 'Advanced',
+        logo: '../public/assets/python-icon.svg'
+      },
+      {
+        name: 'MongoDB',
+        proficiency: 'Intermediate',
+        logo: '../public/assets/mongodb-icon.svg'
+      },
+      {
+        name: 'Spark',
+        proficiency: 'Beginner',
+        logo: '../public/assets/apache_spark-icon.svg'
+      }
     ]
   },
   {
     title: 'Tools & Platforms',
     skills: [
-      { name: 'Hubspot', proficiency: 'Expert' },
-      { name: 'Git', proficiency: 'Intermediate' },
-      { name: 'AWS/GCP', proficiency: 'Beginner' }
+      {
+        name: 'Hubspot',
+        proficiency: 'Expert',
+        logo: '../public/assets/hubspot-icon.svg'
+      },
+      {
+        name: 'Git',
+        proficiency: 'Intermediate',
+        logo: '../public/assets/git-scm-icon.svg'
+      },
+      {
+        name: 'AWS/GCP',
+        proficiency: 'Beginner',
+        logo: '../public/assets/amazon_aws-icon.svg'
+      }
     ]
   }
 ];
 
-const SkillCard = ({ name, proficiency }: { name: string; proficiency: string }) => {
+
+
+const SkillCard = ({logo, name, proficiency }: { logo:string; name: string; proficiency: string }) => {
   return (
     <div className="flex items-center justify-between p-3 bg-[#1D3461] rounded-lg transition-all duration-300 hover:bg-[#1D3461]/80">
-      <span className="text-white font-medium">{name}</span>
+      <div className="flex items-center ">
+      
+      <img src={logo} alt={`${name} logo`} className="w-8 h-8 object-contain"></img>
+      <span className="text-white font-medium p-3">{name}</span>
+      </div >
       <span className={`text-sm px-2 py-1 rounded ${
         proficiency === 'Expert' ? 'bg-green-500/20 text-green-300' :
         proficiency === 'Advanced' ? 'bg-blue-500/20 text-blue-300' :
@@ -78,6 +128,7 @@ const Skills = () => {
                   <SkillCard 
                     key={skillIndex}
                     name={skill.name}
+                    logo={skill.logo}
                     proficiency={skill.proficiency}
                   />
                 ))}
