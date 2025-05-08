@@ -8,22 +8,22 @@ const skillCategories = [
       {
         name: 'Metabase',
         proficiency: 'Expert',
-        logo: "../public/assets/metabase-icon.svg"
+        logo: "/assets/metabase-icon.svg"
       },
       {
         name: 'Power BI',
         proficiency: 'Advanced',
-        logo: '../public/assets/power-bi-icon.svg'
+        logo: '/assets/power-bi-icon.svg'
       },
       {
         name: 'Superset',
         proficiency: 'Intermediate',
-        logo: '../public/assets/apache-superset-icon.svg'
+        logo: '/assets/apache-superset-icon.svg'
       },
       {
         name: 'Looker',
         proficiency: 'Beginner',
-        logo: '../public/assets/looker-icon.svg'
+        logo: '/assets/looker-icon.svg'
       }
     ]
   },
@@ -33,22 +33,22 @@ const skillCategories = [
       {
         name: 'SQL',
         proficiency: 'Expert',
-        logo: '../public/assets/sql-database-generic.svg'
+        logo: '/assets/sql-database-generic.svg'
       },
       {
         name: 'Python',
         proficiency: 'Advanced',
-        logo: '../public/assets/python-icon.svg'
+        logo: '/assets/python-icon.svg'
       },
       {
         name: 'MongoDB',
         proficiency: 'Intermediate',
-        logo: '../public/assets/mongodb-icon.svg'
+        logo: '/assets/mongodb-icon.svg'
       },
       {
         name: 'Spark',
         proficiency: 'Beginner',
-        logo: '../public/assets/apache_spark-icon.svg'
+        logo: '/assets/apache_spark-icon.svg'
       }
     ]
   },
@@ -58,17 +58,17 @@ const skillCategories = [
       {
         name: 'Hubspot',
         proficiency: 'Expert',
-        logo: '../public/assets/hubspot-icon.svg'
+        logo: '/assets/hubspot-icon.svg'
       },
       {
         name: 'Git',
         proficiency: 'Intermediate',
-        logo: '../public/assets/git-scm-icon.svg'
+        logo: '/assets/git-scm-icon.svg'
       },
       {
         name: 'AWS/GCP',
         proficiency: 'Beginner',
-        logo: '../public/assets/amazon_aws-icon.svg'
+        logo: '/assets/amazon_aws-icon.svg'
       }
     ]
   }
