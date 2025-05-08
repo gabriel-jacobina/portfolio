@@ -10,13 +10,13 @@ const Hero = () => {
     if (titleRef.current) {
       titleRef.current.classList.add('animate-fade-in');
     }
-    
+
     setTimeout(() => {
       if (subtitleRef.current) {
         subtitleRef.current.classList.add('animate-fade-in');
       }
     }, 400);
-    
+
     setTimeout(() => {
       if (ctaRef.current) {
         ctaRef.current.classList.add('animate-fade-in');
@@ -25,12 +25,12 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
+    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-0">
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-[#0A192F] to-[#0A192F]/90"></div>
         <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-t from-[#0A192F] to-transparent"></div>
       </div>
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 z-10 relative">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div className="space-y-8">
@@ -39,19 +39,24 @@ const Hero = () => {
               <span className="block">Gabriel Jacobina</span>
               <span className="block text-gray-400 mt-2">Data Analyst</span>
             </h1>
-            
+
             <p className="text-gray-400 text-lg max-w-xl opacity-0 transition-opacity duration-1000" ref={subtitleRef}>
               I transform complex data into actionable insights. Specializing in data visualization, statistical analysis, and machine learning to help organizations make data-driven decisions.
             </p>
-            
+
             <div className="pt-4 opacity-0 transition-opacity duration-1000" ref={ctaRef}>
-              <button 
-                onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+              <button
                 className="group bg-transparent hover:bg-[#64FFDA]/10 text-[#64FFDA] border border-[#64FFDA] px-6 py-3 rounded-md transition-all duration-300 flex items-center space-x-2"
               >
-                Download CV
+                <a
+                  href="/assets/cv_gabriel-jacobina.pdf"
+                  download="cv_gabriel-jacobina.pdf"
+                  className="flex items-center space-x-2"
+                >
+                  Download CV
+                </a>
               </button>
-              <button 
+              <button
                 onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
                 className="group bg-transparent hover:bg-[#64FFDA]/10 text-[#64FFDA] border border-[#64FFDA] px-6 py-3 rounded-md transition-all duration-300 flex items-center space-x-2"
               >
@@ -60,7 +65,7 @@ const Hero = () => {
               </button>
             </div>
           </div>
-          
+
           <div className="relative hidden md:block">
             <div className="w-full h-full max-w-md mx-auto">
               <div className="aspect-square rounded-full bg-[#112240] absolute inset-0 animate-morph"></div>

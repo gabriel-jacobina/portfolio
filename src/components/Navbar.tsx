@@ -46,10 +46,10 @@ const Navbar = () => {
           {/* Social links */}
           <div className="hidden md:flex items-center space-x-4">
             <a href="https://github.com/gabriel-jacobina/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-[#64FFDA] transition-colors">
-              <Github size={20} />
+              <Github size={27} />
             </a>
             <a href="https://linkedin.com/in/gabriel-jacobina/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-[#64FFDA] transition-colors">
-              <Linkedin size={20} />
+              <Linkedin size={27} />
             </a>
           </div>
           

@@ -5,28 +5,27 @@ const skillCategories = [
   {
     title: 'Data Analysis & Visualization',
     skills: [
-      { name: 'Tableau', proficiency: 'Advanced' },
+      { name: 'Metabase', proficiency: 'Expert' },
       { name: 'Power BI', proficiency: 'Advanced' },
-      { name: 'Google Analytics', proficiency: 'Intermediate' },
-      { name: 'Looker', proficiency: 'Intermediate' }
+      { name: 'Superset', proficiency: 'Intermediate' },
+      { name: 'Looker', proficiency: 'Beginner' }
     ]
   },
   {
     title: 'Programming & Databases',
     skills: [
+      { name: 'SQL', proficiency: 'Expert' },
       { name: 'Python', proficiency: 'Advanced' },
-      { name: 'SQL', proficiency: 'Advanced' },
-      { name: 'R', proficiency: 'Intermediate' },
-      { name: 'MongoDB', proficiency: 'Intermediate' }
+      { name: 'MongoDB', proficiency: 'Intermediate' },
+      { name: 'Spark', proficiency: 'Beginner' }
     ]
   },
   {
     title: 'Tools & Platforms',
     skills: [
-      { name: 'Excel/Google Sheets', proficiency: 'Expert' },
-      { name: 'Jupyter Notebook', proficiency: 'Advanced' },
+      { name: 'Hubspot', proficiency: 'Expert' },
       { name: 'Git', proficiency: 'Intermediate' },
-      { name: 'AWS/GCP', proficiency: 'Intermediate' }
+      { name: 'AWS/GCP', proficiency: 'Beginner' }
     ]
   }
 ];
@@ -38,7 +37,8 @@ const SkillCard = ({ name, proficiency }: { name: string; proficiency: string })
       <span className={`text-sm px-2 py-1 rounded ${
         proficiency === 'Expert' ? 'bg-green-500/20 text-green-300' :
         proficiency === 'Advanced' ? 'bg-blue-500/20 text-blue-300' :
-        'bg-yellow-500/20 text-yellow-300'
+        proficiency === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-300' :
+        'bg-gray-500/20 text-gray-300'
       }`}>
         {proficiency}
       </span>

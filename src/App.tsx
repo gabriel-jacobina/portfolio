@@ -23,7 +23,7 @@ function MainContent() {
 
 function App() {
   useEffect(() => {
-    document.title = "Data Analyst Portffffolio";
+    document.title = "Data Analyst Portfolio";
   }, []);
 
   return (
