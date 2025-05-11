@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
-            <p className="text-[#64FFDA] font-bold text-xl">DA<span className="text-white">Portfolio</span></p>
+            <p className="text-[#64FFDA] font-bold text-xl">GJ<span className="text-white">Portfolio</span></p>
             <p className="text-gray-400 mt-2">Transforming data into actionable insights</p>
           </div>
           
